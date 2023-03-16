@@ -3,7 +3,7 @@ import bodyParser from "body-parser";
 import morgan from "morgan";
 import cors from "cors";
 //importo las rutas
-import products from "../routes/products.Router.js";
+import users from "../routes/user.Router";
 
 const server = express();
 
@@ -22,7 +22,7 @@ server.use((req, res, next) => {
   next();
 });
 
-server.use("/products", products);
+server.use("/user", users);
 
 // Error catching endware.
 server.use((err, req, res, next) => {
