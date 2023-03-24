@@ -12,6 +12,13 @@ const Assist = dataBase.define(
       type: DataTypes.BOOLEAN,
       allowNull: false,
     },
+    hora: {
+      type: DataTypes.TIME,
+      allowNull: false,
+    },
+    tarde: {
+      type: DataTypes.BOOLEAN,
+    },
   },
   {
     timestamps: false,

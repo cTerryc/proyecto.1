@@ -1,5 +1,6 @@
 import Users from "../models/users.js";
 import { usersGenerate } from "../generadorDeDatos.js";
+import Assist from "../models/assist.js";
 
 export function createUser({ name, email, dni }) {
   // console.log("esto es hasgoogle",hashgoogle)
@@ -19,4 +20,14 @@ export function createUser({ name, email, dni }) {
 export function findAllUsers() {
   let findUsers = Users.findAll();
   return findUsers;
+}
+
+export function userById(code) {
+  let findUser = Users.findOne({ 
+    where: { code },
+    include: [{
+      model: Assist,
+    }]
+   });
+  return findUser
 }

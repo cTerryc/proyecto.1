@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { postUser, getUser } from "../controllers/postUser.js";
+import { postUser, getAllUsers, getUserById } from "../controllers/users.controllers.js";
 import bodyParser from "body-parser";
 
 const users = Router();
@@ -7,6 +7,7 @@ const users = Router();
 users.use(bodyParser.urlencoded({ extended: true }));
 
 users.post("/", postUser);
-users.get("/", getUser);
+users.get("/", getAllUsers);
+users.get("/code/:code", getUserById)
 
 export default users;

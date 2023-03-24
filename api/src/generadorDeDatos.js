@@ -12,7 +12,17 @@ for (let i = 99999991; i < 99999999; i++) {
 
 export let usersGenerate = [...usuarios];
 
-
+// let hora1 = "07:45:00";
+// let hora2 = "09:21:11";
+// // let hora3 = "12:21:11";
+// if (hora1 < "08:00:00" ) {
+//   console.log(true)
+// }
+// if (hora2 > "08:00:00" ) {
+//   console.log(true)
+// } else {
+//   console.log(false)
+// }
 // let codeCounter = 1;
 
 // async function getCodeCounter() {
