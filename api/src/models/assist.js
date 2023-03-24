@@ -2,7 +2,7 @@ import { DataTypes } from "sequelize";
 import dataBase from "../config/db.js";
 
 const Assist = dataBase.define(
-  "users",
+  "assist",
   {
     fecha: {
       type: DataTypes.DATEONLY,
@@ -11,10 +11,17 @@ const Assist = dataBase.define(
     presente: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
-      defaultValue: false
     },
   },
-  { timestamps: false }
+  {
+    timestamps: false,
+    indexes: [
+      {
+        unique: true,
+        fields: ["fecha", "userId"],
+      },
+    ],
+  }
 );
 
 export default Assist;
